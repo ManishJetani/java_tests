@@ -38,7 +38,6 @@ public class DefaultVendingMachine implements VendingMachine {
             if (selectedProduct.getBalance() > 0 && price < totalReceived) {
                 selectedProduct.vend();
 
-
                 VendSuccess result = new VendSuccess(selectedProduct.getProduct(), totalReceived - price);
                 clearSelection();
                 return result;
@@ -57,11 +56,6 @@ public class DefaultVendingMachine implements VendingMachine {
 
     public List<Product> getProducts() {
         return products.stream().map(x -> x.getProduct()).collect(Collectors.toList());
-    }
-
-    @Override
-    public List<Coin> getAcceptableCoins() {
-        return acceptableCoins;
     }
 
     @Override
