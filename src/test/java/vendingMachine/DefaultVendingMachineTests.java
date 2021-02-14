@@ -16,7 +16,7 @@ public class DefaultVendingMachineTests {
     }
 
     @Test
-    public void getProducts_returns_available_products() {
+    public void verifies_returns_available_products() {
         List<Product> productList = vendingMachine.getProducts();
 
         Assert.assertThat(productList.size(), Is.is(3));
@@ -50,13 +50,16 @@ public class DefaultVendingMachineTests {
     }
 
     @Test
-    public void allows_user_to_cancel_request() {
+    public void allows_user_to_cancel_request_and_get_refund() {
         vendingMachine.payCoin(25).payCoin(25);
         vendingMachine.selectProduct(1);
 
         Assert.assertThat(vendingMachine.getSelectedProduct(), Is.is(ProductFactory.createPepsi()));
         Assert.assertThat(vendingMachine.getPaidTotal(), Is.is(50));
-        vendingMachine.cancelRequest();
+
+        int refund = vendingMachine.cancelRequest();
+        Assert.assertThat(refund, Is.is(50));
+
         Assert.assertNull(vendingMachine.getSelectedProduct());
         Assert.assertThat(vendingMachine.getPaidTotal(), Is.is(0));
     }

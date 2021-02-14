@@ -81,8 +81,10 @@ public class DefaultVendingMachine implements VendingMachine {
     }
 
     @Override
-    public void cancelRequest() {
+    public int cancelRequest() {
+        int refund = totalReceived;
         clearSelection();
+        return refund;
     }
 
     public static VendingMachine createDefault() {

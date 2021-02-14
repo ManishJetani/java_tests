@@ -7,7 +7,7 @@ public interface VendingMachine {
     int getPaidTotal();
     Product selectProduct(int index);
     Product getSelectedProduct();
-    void cancelRequest();
+    int cancelRequest();
     VendSuccess confirmRequest();
     VendingMachine reset();
     List<Product> getProducts();
