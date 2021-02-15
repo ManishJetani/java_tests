@@ -37,7 +37,8 @@ public class CityBikeTests {
                 .when()
                 .get("visa-frankfurt")
                 .then()
-                .extract().response();
+                .extract()
+                .response();
 
         Assert.assertThat(response.getStatusCode(), Is.is(200));
 

@@ -1,4 +1,4 @@
-@vend
+@vendingMachine
 Feature: vending machine should work as expected
 
   Scenario: machine accepts only valid coins
