@@ -1,19 +1,14 @@
 package cityBikes;
 
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.hamcrest.core.Is;
 import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import io.cucumber.java.en.*;
-import org.hamcrest.core.Is;
-import org.junit.Assert;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 
