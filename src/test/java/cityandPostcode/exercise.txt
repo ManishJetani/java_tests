@@ -1,0 +1,12 @@
+Prerequisites
+Access to the open API api.zippopotam.us
+Review the usage information on the website
+This exercise should take between 1 – 2 hrs.
+Brief
+The developers have created an API which returns information related to a zip/post code, the details of which can be accesses via this link api.zippopotam.us. You have been assigned to create the automation test suite for this API.
+The backlog item for the original development work was entitled
+As a 3rd party Developer I am able access to the API and retrieved postcode information for the US and Great Britain only.
+Exercise
+1)	 Create the BDD scenarios for testing the API, considering any failure scenarios.
+2)	In your preferred language and framework write the code to automate the scenarios in point 1.
+The above BDD scenarios and code should be submitted in a plain text file for review no later than 9am on Wednesday 08 September 2021.
