@@ -27,6 +27,11 @@ public class PetsTest {
 
         response.prettyPrint();
         Assert.assertThat(response.getStatusCode(), Is.is(200));
+
+        JsonPath jsonPath = response.getBody().jsonPath();
+        Assert.assertThat(jsonPath.get("sold"), Is.is(9));
+        Assert.assertThat(jsonPath.get("available"), Is.is(1));
+
     }
 
     @Test
